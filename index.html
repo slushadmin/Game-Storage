@@ -14,21 +14,25 @@
             min-height: 100vh;
             font-family: 'Bai Jamjuree', sans-serif;
             background-color: #000;
+            position: relative;
+        }
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            padding-top: 20px; /* Add some padding to push content down slightly */
         }
         .grid-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             width: 80%;
-            margin: 20px auto;
+            margin: 0 auto;
             gap: 10px;
         }
         .game-thumbnail {
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 5px;
             text-align: center;
-            z-index: 10;
-            position: relative;
             width: calc(12.5% - 10px);
             aspect-ratio: 1 / 1;
             display: flex;
@@ -56,24 +60,26 @@
             width: 100%;
             height: 100%;
             border: none;
-            z-index: -1;
+            z-index: 0;
         }
     </style>
 </head>
 <body>
     <iframe src="particles.html" frameborder="0"></iframe>
     
-    <div class="grid-container">
-        <!-- Repeat this block 24 times for 3 rows of 8 thumbnails -->
-        <div class="game-thumbnail">
-            <img src="path/to/your/game-image1.jpg" alt="Game Thumbnail">
-            <div class="game-name">Game 1</div>
+    <div class="content-wrapper">
+        <div class="grid-container">
+            <!-- Repeat this block 24 times for 3 rows of 8 thumbnails -->
+            <div class="game-thumbnail">
+                <img src="path/to/your/game-image1.jpg" alt="Game Thumbnail">
+                <div class="game-name">Game 1</div>
+            </div>
+            <div class="game-thumbnail">
+                <img src="path/to/your/game-image2.jpg" alt="Game Thumbnail">
+                <div class="game-name">Game 2</div>
+            </div>
+            <!-- ... Add more game thumbnails here ... -->
         </div>
-        <div class="game-thumbnail">
-            <img src="path/to/your/game-image2.jpg" alt="Game Thumbnail">
-            <div class="game-name">Game 2</div>
-        </div>
-        <!-- ... Add more game thumbnails here ... -->
     </div>
 </body>
 </html>
