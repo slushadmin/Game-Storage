@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URBAN PLAY</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+        .game-thumbnail {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            z-index: 10;
+        }
+        .game-thumbnail img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .game-name {
+            color: #fff;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="particles.html"></iframe>
+    
+    <div class="game-thumbnail">
+        <img src="path/to/your/game-image.jpg" alt="Game Thumbnail">
+        <div class="game-name">Your Game Name</div>
+    </div>
+</body>
+</html>
