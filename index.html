@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Thumbnail with Particle Background</title>
+    <title>Game Thumbnails Grid with Particle Background</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
@@ -11,36 +11,43 @@
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            min-height: 100vh;
             font-family: 'Bai Jamjuree', sans-serif;
+            background-color: #000;
+        }
+        .grid-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 80%;
+            margin: 20px auto;
+            gap: 10px;
         }
         .game-thumbnail {
             background-color: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
+            border-radius: 5px;
             text-align: center;
             z-index: 10;
             position: relative;
-            width: 250px;
-            height: 250px;
+            width: calc(12.5% - 10px);
+            aspect-ratio: 1 / 1;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            padding: 5px;
+            box-sizing: border-box;
         }
         .game-thumbnail img {
-            width: 200px;
-            height: 200px;
+            width: 100%;
+            height: calc(100% - 20px);
             object-fit: cover;
-            border-radius: 10px;
+            border-radius: 3px;
         }
         .game-name {
             color: #fff;
-            font-size: 18px;
+            font-size: 12px;
             font-family: 'Aldrich', sans-serif;
+            margin-top: 5px;
         }
         iframe {
             position: fixed;
@@ -56,9 +63,17 @@
 <body>
     <iframe src="particles.html" frameborder="0"></iframe>
     
-    <div class="game-thumbnail">
-        <img src="path/to/your/game-image.jpg" alt="Game Thumbnail">
-        <div class="game-name">Your Game Name</div>
+    <div class="grid-container">
+        <!-- Repeat this block 24 times for 3 rows of 8 thumbnails -->
+        <div class="game-thumbnail">
+            <img src="path/to/your/game-image1.jpg" alt="Game Thumbnail">
+            <div class="game-name">Game 1</div>
+        </div>
+        <div class="game-thumbnail">
+            <img src="path/to/your/game-image2.jpg" alt="Game Thumbnail">
+            <div class="game-name">Game 2</div>
+        </div>
+        <!-- ... Add more game thumbnails here ... -->
     </div>
 </body>
 </html>
