@@ -23,7 +23,7 @@
         }
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(8, 1fr); /* Adjusted to fit more thumbnails */
+            grid-template-columns: repeat(9, 1fr); /* Adjusted to fit more thumbnails */
             gap: 10px;
             width: 95%;
             max-width: 1600px;
@@ -46,8 +46,9 @@
             transform: scale(1.05);
         }
         .game-thumbnail img {
-            width: 100%;
-            height: calc(100% - 20px); /* Adjusted height */
+            width: auto; /* Allow width to be flexible */
+            height: calc(100% - 25px); /* Adjusted height for better fit */
+            max-height: 70%; /* Limit max height to keep it centered */
             object-fit: cover; /* Maintain aspect ratio of image */
             border-radius: 3px;
         }
@@ -93,23 +94,27 @@
                 <img src="path/to/your/game-image4.jpg" alt="Game Thumbnail">
                 <div class="game-name">Tag</div>
             </div>
-            <div class="game-thumbnail">
+           <div class="game-thumbnail">
                 <img src="path/to/your/game-image5.jpg" alt="Game Thumbnail">
                 <div class="game-name">Portal</div>
-            </div>
-            <div class="game-thumbnail">
+           </div>
+           <div class="game-thumbnail">
                 <img src="path/to/your/game-image6.jpg" alt="Game Thumbnail">
                 <div class="game-name">Drift Hunters</div>
-            </div>
-            <div class="game-thumbnail">
+           </div>
+           <div class="game-thumbnail">
                 <img src="path/to/your/game-image7.jpg" alt="Game Thumbnail">
                 <div class="game-name">House Of Hazards</div>
-            </div>
+           </div>
            <div class="game-thumbnail">
                 <img src="path/to/your/game-image8.jpg" alt="Game Thumbnail">
                 <div class="game-name">Orbytex</div>
            </div>
            <!-- Add more game thumbnails as needed -->
+           <div class="game-thumbnail">
+                <img src="path/to/your/game-image9.jpg" alt="Game Thumbnail">
+                <div class="game-name">New Game</div>
+           </div>
         </div>
     </div>
 </body>
