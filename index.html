@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Thumbnails Grid with Particle Background</title>
+    <title>URBAN PLAY</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
@@ -23,8 +23,8 @@
         }
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(8, 1fr);
-            gap: 10px;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
             width: 95%;
             max-width: 1600px;
             margin: 0 auto;
@@ -34,7 +34,7 @@
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 5px;
             text-align: center;
-            aspect-ratio: 1 / 1; /* Keep square aspect ratio */
+            aspect-ratio: 3 / 4; /* Changed aspect ratio */
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -46,10 +46,9 @@
             transform: scale(1.05);
         }
         .game-thumbnail img {
-            width: auto; /* Allow width to be flexible */
-            height: calc(100% - 25px); /* Adjust height to make it narrower */
-            max-height: 70%; /* Limit max height to keep it centered */
-            object-fit: cover; /* Maintain aspect ratio of image */
+            width: 100%;
+            height: calc(100% - 25px); /* Adjusted height */
+            object-fit: cover;
             border-radius: 3px;
         }
         .game-name {
@@ -60,6 +59,7 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            padding: 0 2px; /* Added padding */
         }
         iframe {
             position: fixed;
