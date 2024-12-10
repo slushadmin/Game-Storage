@@ -23,8 +23,8 @@
         }
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(8, 1fr); /* Adjusted to fit more thumbnails */
+            gap: 10px;
             width: 95%;
             max-width: 1600px;
             margin: 0 auto;
@@ -34,7 +34,7 @@
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 5px;
             text-align: center;
-            aspect-ratio: 3 / 4; /* Changed aspect ratio */
+            aspect-ratio: 1 / 1; /* Keep square aspect ratio */
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -47,8 +47,8 @@
         }
         .game-thumbnail img {
             width: 100%;
-            height: calc(100% - 25px); /* Adjusted height */
-            object-fit: cover;
+            height: calc(100% - 20px); /* Adjusted height */
+            object-fit: cover; /* Maintain aspect ratio of image */
             border-radius: 3px;
         }
         .game-name {
@@ -59,7 +59,6 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            padding: 0 2px; /* Added padding */
         }
         iframe {
             position: fixed;
@@ -106,10 +105,11 @@
                 <img src="path/to/your/game-image7.jpg" alt="Game Thumbnail">
                 <div class="game-name">House Of Hazards</div>
             </div>
-            <div class="game-thumbnail">
+           <div class="game-thumbnail">
                 <img src="path/to/your/game-image8.jpg" alt="Game Thumbnail">
                 <div class="game-name">Orbytex</div>
-            </div>
+           </div>
+           <!-- Add more game thumbnails as needed -->
         </div>
     </div>
 </body>
