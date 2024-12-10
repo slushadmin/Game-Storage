@@ -23,8 +23,8 @@
         }
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 10px;
             width: 95%;
             max-width: 1600px;
             margin: 0 auto;
@@ -34,7 +34,7 @@
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 5px;
             text-align: center;
-            aspect-ratio: 3 / 4; /* Changed aspect ratio */
+            aspect-ratio: 1 / 1; /* Keep square aspect ratio */
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -46,9 +46,10 @@
             transform: scale(1.05);
         }
         .game-thumbnail img {
-            width: 100%;
-            height: calc(100% - 25px); /* Adjusted height */
-            object-fit: cover;
+            width: auto; /* Allow width to be flexible */
+            height: calc(100% - 25px); /* Adjust height to make it narrower */
+            max-height: 70%; /* Limit max height to keep it centered */
+            object-fit: cover; /* Maintain aspect ratio of image */
             border-radius: 3px;
         }
         .game-name {
@@ -59,7 +60,6 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            padding: 0 2px; /* Added padding */
         }
         iframe {
             position: fixed;
