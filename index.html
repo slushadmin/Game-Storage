@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URBAN PLAY</title>
+    <title>Game Thumbnail with Particle Background</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
+            overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
             font-family: Arial, sans-serif;
-            position: relative;
         }
         .game-thumbnail {
             background-color: rgba(255, 255, 255, 0.1);
@@ -21,6 +21,7 @@
             border-radius: 10px;
             text-align: center;
             z-index: 10;
+            position: relative;
         }
         .game-thumbnail img {
             width: 200px;
@@ -34,7 +35,7 @@
             font-size: 18px;
         }
         iframe {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
@@ -45,7 +46,7 @@
     </style>
 </head>
 <body>
-    <iframe src="particles.html"></iframe>
+    <iframe src="particles.html" frameborder="0"></iframe>
     
     <div class="game-thumbnail">
         <img src="path/to/your/game-image.jpg" alt="Game Thumbnail">
