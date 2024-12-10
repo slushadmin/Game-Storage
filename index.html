@@ -23,18 +23,18 @@
         }
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(8, 1fr);
-            gap: 10px;
-            width: 95%; /* Increased width */
-            max-width: 1600px; /* Optional: prevents stretching on very large screens */
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+            width: 95%;
+            max-width: 1600px;
             margin: 0 auto;
-            padding: 0 10px; /* Added padding */
+            padding: 0 10px;
         }
         .game-thumbnail {
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 5px;
             text-align: center;
-            aspect-ratio: 1 / 1;
+            aspect-ratio: 3 / 4; /* Changed aspect ratio */
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -47,7 +47,7 @@
         }
         .game-thumbnail img {
             width: 100%;
-            height: calc(100% - 20px);
+            height: calc(100% - 25px); /* Adjusted height */
             object-fit: cover;
             border-radius: 3px;
         }
@@ -59,6 +59,7 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            padding: 0 2px; /* Added padding */
         }
         iframe {
             position: fixed;
@@ -76,7 +77,7 @@
     
     <div class="content-wrapper">
         <div class="grid-container">
-            <!-- Repeat 8 times -->
+            <!-- Repeat game thumbnails -->
             <div class="game-thumbnail">
                 <img src="images/roblox.png" alt="Game Thumbnail">
                 <div class="game-name">Roblox</div>
