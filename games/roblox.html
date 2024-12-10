@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>URBAN PLAY - Roblox</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
   <style>
     /* Ensure the body and html take up the full height and width of the screen */
     html, body {
@@ -37,7 +40,7 @@
     }
 
     #loading-text {
-      font-family: 'Aldrich', sans-serif;
+      font-family: 'Aldrich', sans-serif; /* Use Aldrich font */
       color: white;
       font-size: 24px;
       margin-bottom: 20px;
@@ -63,22 +66,27 @@
     <div class="spinner"></div>
   </div>
   
-  <iframe src="https://grade.l5.ca/a/hvtrs8%2F-nmw%2Cge%2Fcprs-a-1%3B920-b%2Chvmn" onload="hideLoadingScreen()"></iframe>
+  <iframe src="https://grade.l5.ca/a/hvtrs8%2F-nmw%2Cge%2Fcprs-a-12000-b%2Chvmn" onload="showIframe()"></iframe>
 
   <script>
-    function hideLoadingScreen() {
+    function showIframe() {
+      const loadingScreen = document.getElementById('loading-screen');
+      const iframe = document.querySelector('iframe');
+
+      // Show iframe after loading
+      iframe.style.display = 'block';
+      
+      // Hide loading screen after a fixed duration
       setTimeout(() => {
-        const loadingScreen = document.getElementById('loading-screen');
-        const iframe = document.querySelector('iframe');
-        
-        loadingScreen.style.opacity = '0';
-        iframe.style.display = 'block'; // Show iframe
-        
+        loadingScreen.style.opacity = '0'; // Fade out
         setTimeout(() => {
-          loadingScreen.style.display = 'none';
-        }, 500);
-      }, 3000); // Delay before hiding loading screen
+          loadingScreen.style.display = 'none'; // Remove from view
+        }, 500); // Wait for fade out to complete
+      }, 3000); // Duration to show loading screen
     }
+
+    // Initial call to showIframe to handle loading screen visibility
+    showIframe();
   </script>
 </body>
 </html>
