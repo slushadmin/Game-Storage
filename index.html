@@ -21,15 +21,18 @@
             position: relative;
             z-index: 1;
             padding-top: 20px;
+            width: 100%; /* Full width */
+            box-sizing: border-box;
         }
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Responsive grid */
+            grid-template-columns: repeat(9, 1fr); /* Fixed 9 columns */
             gap: 10px;
-            width: 95%;
-            max-width: 1600px;
+            width: 100%; /* Full width */
+            max-width: 100%; /* Ensure it doesn't exceed screen width */
             margin: 0 auto;
             padding: 0 10px;
+            box-sizing: border-box;
         }
         .game-thumbnail {
             background-color: rgba(255, 255, 255, 0.1);
