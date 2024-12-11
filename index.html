@@ -23,7 +23,7 @@
         }
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(9, 1fr); /* 9 thumbnails per row */
+            grid-template-columns: repeat(9, 1fr); /* Adjusted to fit more thumbnails */
             gap: 10px;
             width: 95%;
             max-width: 1600px;
@@ -34,7 +34,7 @@
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 5px;
             text-align: center;
-            aspect-ratio: 3 / 4; /* Aspect ratio for thumbnails */
+            aspect-ratio: 3 / 4; /* Changed aspect ratio for narrower thumbnails */
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -54,13 +54,13 @@
             border-radius: 3px;
         }
         .game-name {
-            color: #fff; /* Ensure text is white */
+            color: #fff;
             font-size: 12px;
             font-family: 'Aldrich', sans-serif;
             margin-top: 5px;
             white-space: nowrap;
             overflow: hidden;
-            text-overflow: ellipsis; /* Handle long names */
+            text-overflow: ellipsis;
         }
         iframe {
             position: fixed;
@@ -75,22 +75,23 @@
 </head>
 <body>
     <iframe src="particles.html" frameborder="0"></iframe>
+    
     <div class="content-wrapper">
         <div class="grid-container">
             <!-- Game thumbnails -->
-           <a href="games/roblox.html" class="game-thumbnail">
+            <a href="games/roblox.html" class="game-thumbnail">
                 <img src="images/roblox.png" alt="Game Thumbnail">
                 <div class="game-name">Roblox</div>
-           </a>
-           <a href="games/blockblast.html" class="game-thumbnail">
+            </a>
+            <a href="games/blockblast.html" class="game-thumbnail">
                 <img src="images/blockblast.png" alt="Game Thumbnail">
                 <div class="game-name">Block Blast</div>
-           </a>
-           <a href="games/retrobowl.html" class="game-thumbnail">
+            </a>
+            <a href="games/retrobowl.html" class="game-thumbnail">
                 <img src="images/retrobowl.png" alt="Game Thumbnail">
                 <div class="game-name">Retro Bowl</div>
-           </a>
-           <a href="games/tag.html" class="game-thumbnail">
+            </a>
+            <a href="games/tag.html" class="game-thumbnail">
                 <img src="images/tag.png" alt="Game Thumbnail">
                 <div class="game-name">Tag</div>
            </a>
@@ -103,37 +104,86 @@
                 <div class="game-name">Drift Hunters</div>
            </a>
            <a href="games/house-of-hazards.html" class="game-thumbnail">
-                <img src="images/houseofhazards.png" alt "Game Thumbnail">
-                <div class "game-name">House Of Hazards</div>
+                <img src="images/houseofhazards.png" alt="Game Thumbnail">
+                <div class="game-name">House Of Hazards</div>
            </a>
-           <a href "games/orbytex.html" class "game-thumbnail">
-                <img src "images/orbytex.png" alt "Game Thumbnail">
-                <div class "game-name">Orbytex</div>
-           </a>  
-           <a href "games/time-shooter-2.html" class "game-thumbnail">
-               <img src "images/timeshooter2.png" alt "Game Thumbnail">
-               <div class "game-name">Time Shooter 2</div>
-           </a>  
-           <a href "games/basket-random.html" class "game-thumbnail">
-               <img src "images/basketrandom.png" alt "Game Thumbnail">
-               <div class "game-name">Basket Random</div>
-           </a>  
-           <a href "games/time-shooter-3.html" class "game-thumbnail">
-               <img src "images/timeshooter3.png" alt "Game Thumbnail">
-               <div class "game-name">Time Shooter 3</div>
-           </a>  
-           <a href "games/snow-rider-3d.html" class "game-thumbnail">
-               <img src "images/snowrider3d.png" alt "Game Thumbnail">
-               <div class "game-name">Snow Rider 3D</div>
-           </a>  
-           <!-- Continue adding remaining game thumbnails -->
-           <!-- Example -->
-           <!--
-           ...
-           -->
-           
-        </div> 
-    </div> 
+           <a href="games/orbytex.html" class="game-thumbnail">
+                <img src="images/orbytex.png" alt="Game Thumbnail">
+                <div class="game-name">Orbytex</div>
+           </a>
+           <a href="games/time-shooter-2.html" class="game-thumbnail">
+               <img src="images/timeshooter2.png" alt="Game Thumbnail">
+               <div class="game-name">Time Shooter 2</div>
+           </a>
+           <a href="games/basket-random.html" class="game-thumbnail">
+               <img src="images/basketrandom.png" alt="Game Thumbnail">
+               <div class="game-name">Basket Random</div>
+           </a>
+           <a href="games/time-shooter-3.html" class="game-thumbnail">
+               <img src="images/timeshooter3.png" alt="Game Thumbnail">
+               <div class="game-name">Time Shooter 3</div>
+           </a>
+           <a href="games/snow-rider-3d.html" class="game-thumbnail">
+               <img src="images/snowrider3d.png" alt="Game Thumbnail">
+               <div class="game-name">Snow Rider 3D</div>
+           </a>
+           <a href="games/slope.html" class="game-thumbnail">
+               <img src="images/slope.png" alt="Game Thumbnail">
+               <div class="game-name">Slope</div>
+           </a>
+           <a href="games/tiny-fishing.html" class="game-thumbnail">
+               <img src="images/tinyfishing.png" alt="Game Thumbnail">
+               <div class="game-name">Tiny Fishing</div>
+           </a>
+           <a href="games/ovo-2.html" class="game-thumbnail">
+               <img src="images/ovo2.png" alt="Game Thumbnail">
+               <div class="game-name">OvO 2</div>
+           </a>
+           <a href="games/temple-run-2.html" class="game-thumbnail">
+               <img src="images/templerun2.png" alt="Game Thumbnail">
+               <div class="game-name">Temple Run 2</div>
+           </a>
+           <a href="games/fnf.html" class="game-thumbnail">
+               <img src="images/fnf.png" alt="Game Thumbnail">
+               <div class="game-name">FNF</div>
+           </a>
+           <a href="games/run-3.html" class="game-thumbnail">
+               <img src="images/run3.png" alt="Game Thumbnail">
+               <div class="game-name">Run 3</div>
+           </a>
+           <a href="games/1v1-lol.html" class="game-thumbnail">
+               <img src="images/1v1lol.png" alt="Game Thumbnail">
+               <div class="game-name">1v1.LOL</div>
+           </a>
+           <a href="games/ovo-1-4-4.html" class="game-thumbnail">
+               <img src="images/ovo.png" alt="Game Thumbnail">
+               <div class="game-name">OvO 1.4.4</div>
+           </a>
+           <a href="games/ovo-1-4.html" class="game-thumbnail">
+               <img src="images/ovo1.png" alt="Game Thumbnail">
+               <div class="game-name">OvO 1.4</div>
+           </a>
+           <a href="games/minecraft-1-5-2.html" class="game-thumbnail">
+               <img src="images/minecraft.png" alt="Game Thumbnail">
+               <div class="game-name">Minecraft 1.5.2</div>
+           </a>
+           <a href="games/minecraft-1-8-8.html" class="game-thumbnail">
+               <img src="images/minecraft1.png" alt="Game Thumbnail">
+               <div class="game-name">Minecraft 1.8.8</div>
+           </a>
+           <a href="games/ovo-procanim.html" class="game-thumbnail">
+               <img src="images/ovoprocanim.png" alt="Game Thumbnail">
+               <div class="game-name">OvO Procanim</div>
+           </a>              
+           <a href="games/subway-surfers.html" class="game-thumbnail">
+               <img src="images/subwaysurfers.png" alt="Game Thumbnail">
+               <div class="game-name">Subway Surfers</div>
+           </a>
+           <a href="games/destiny-of-the-beacon.html" class="game-thumbnail">
+               <img src="images/destinyofthebeacon.png" alt="Game Thumbnail">
+               <div class="game-name">Destiny Of The Beacon</div>
+           </a>
+        </div>
+    </div>
 </body>
 </html>
-
